@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>newSite</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet"> 
+
+	<style type="text/css">
+
+	section{display:block;}
+
+	.home-home{
+		background:url(imgs/backgr-1.jpg) #D6AD97 no-repeat center;
+		background-size: 100%;
+
+	}
+	.home-about{
+		background:url(imgs/portfolio-8.jpg) #D6AD97 no-repeat center center;
+		background-size: 100%;
+		opacity:0;
+		animation:animfade 1.5s ease-in 1s forwards ;
+	}
+
+	@media(max-width:60rem){ /*when screen smaller than 60rem*/
+		.home-home{
+			background:url(imgs/portfolio-8.jpg) #D6AD97 no-repeat center center;
+			background-size: cover;
+		}
+	}
+	h1.first-title{
+		font-family: 'Caveat Brush', cursive !important;
+	}
+	#anim{
+		animation: animfade 2s linear forwards, comeDown 1.5s ease-out forwards;
+	}
+	
+	@keyframes animfade {
+		0%{opacity:0;}
+		100%{opacity:1;}
+	}
+	@keyframes comeDown {
+		0%{transform: translateY(-100%);
+			-webkit- transform: translateY(-100%)}
+		100%{transform: translateY(0);
+			-webkit- transform: translateY(-100%)}
+	}
+
+	</style>
+
+</head>
+<body>
+
+<div id="anim">
+
+	<header>
+		<img src="imgs/logo.jpg" alt="super logo" class="logo"/>
+		<nav>
+			<ul>
+				<li class="skew"><a href="#">HOME</a></li>
+				<li class="skew"><a href="#">ABOUT</a></li>
+				<li class="skew"><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="home-home">
+		<h1 class="first-title" style="font-family: Bowlby One SC">
+			FEELING GRATE EVERYWHERE
+		</h1>
+		<a href="#" class="button button-accent">See Our Work</a>
+		<p>&nbsp</p>
+
+	</section>
+
+	<section class="home-about">
+		<div class="home-about-textbox">
+			<h2>Who we are</h2>
+			<p>
+Lot consectetur adipiscing elit metus leo penatibus, nec vehicula fames urna egestas potenti velit phasellus scelerisque id, laoreet fusc
+			</p>
+			<p>
+<strong>Fringilla primis curae</strong>. Teortis id massa interdum, scelerisque magna purus ut pharetra tempus nascetur, eleifend venenatis nullam risus lacus inceptos cras
+			</p>
+		</div>
+	</section>
+</div>
+
+
+	<h2 class="destinations">
+		<span id="o1">OUR</span>
+		<span id="t2"> BEST</span>
+		<span id="t3">DESTINATIONS</span>
+	</h2>
+	
+	<br>
+	<section class="portfolio">
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-1.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Fresh Air</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-2.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Touch the freedom</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-3.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Healty entertainments</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-4.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Beautiful nature</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-5.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Hear the silence</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+
+		<figure class="port-item">
+		 <img src="imgs/portfolio-6.jpg" alt="portfolio item">	
+		 <figcaption class="port-description">
+			<p>Enjoy your rest</p> 
+			<a href="#" class="button button-accent button-small">project details</a>	
+		 </figcaption>
+		</figure>
+		
+	</section>
+
+	<section class="pre-footer">
+		<h3>like what you see?</h3>
+		<h4>then what are you waiting for?</h4>
+		<a href="#" class="button-prefooter">Further</a>
+	</section>
+
+	<footer>
+		<p><span>Tellus</span> sem imperdiet etiam consequat lobortis id massa interdum, scelerisque magna purus ut pharetra tempus nascetur, eleifend venenatis nu.</p>
+		
+		<section class="list">
+		<ul class="first">
+			<li><strong><span>footer idea.</span></strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+		</ul>
+		<ul>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+		</ul>
+		<ul class="last">
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+			<li><strong>footer idea.</strong></li>
+
+		</ul>
+		</section>
+
+	</footer>
+
+</body>
+</html>
