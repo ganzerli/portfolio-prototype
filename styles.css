@@ -198,8 +198,8 @@ body{
 	margin-top: 1em;
 	border-radius:10px;
 	transform:translateX(-150%);
-	-webkit-transition: all .5s ease-out ;
-	transition: all .5s ease-out ;
+	-webkit-transition: all .5s ease-out 2s;
+	transition: all .5s ease-out 2s;
 }
 .part:hover::before{
 		transform:translateX(-40%);
@@ -259,7 +259,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	padding: .5em 1em;
 	cursor: pointer;
 	border-radius: 50%;
-	background-color: rgba(1,1,1,.1);
+	background-color: rgba(1,1,1,.4);
 }
 .menu-inactive{ /*  classs given from js   */
 	visibility:hidden;
@@ -277,15 +277,16 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	transform: translateX(18%)
 }
 .arrow-inside{
-	transition: transform .4s ease-out .1s
+	transition: transform .6s cubic-bezier(.44,-0.46,.23,1.49);
 }
 
 .arrow-line{
-  background:#ddf;
+  background:white;
   width:3rem;
   height:8px;
   border-radius:.5rem;
-  box-shadow: 0 0 2px #ddf; 
+  box-shadow: 0 0 2px white;
+  overflow:hidden;
 }
 .arrow-line:nth-child(2){
   width:4rem;
@@ -375,6 +376,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	z-index:3;
 	border-radius: 3px;
 	transition:all .4s ease-out;
+	box-shadow: 0 0 2px blue;
 }
 #menu-container{
 	position:fixed;
@@ -459,7 +461,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 }
 
 .overlayPart:hover .menu-description{
-	height:7rem;
+	height:11rem;
 	opacity: 1;
 	transform:translate(10%,-20%);
 }
@@ -492,7 +494,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 }
 
 .titleWrap{
-	margin-top:35vh;
+	margin-top:28vh;
 	height:5.3em;
 	overflow: hidden;
 	transform:scale(1.1,1.1);
@@ -523,8 +525,8 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	justify-content: flex-end;
 }
 .subtitle{
-	margin-left:10em;
-	width:10em;
+	margin-left:2rem;
+	width:28vw;
 	min-height:1em;
 	overflow: hidden;
 }
