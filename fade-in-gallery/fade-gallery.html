@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GALLERY 1</title>
+	<style type="text/css">
+
+	body{
+		margin:20px;
+		padding:0
+		background-color:#333;
+		overflow-x: hidden;
+		perspective: 3000px;
+		opacity: 0;
+		background-color:rgba(40,208,255, 1);
+
+	}
+
+	.container{
+		transform: rotateX(90deg);
+		transform-origin: top;
+		animation:close 2.5s ease-in forwards;
+	}
+	.main-img{
+		position:relative;
+		max-width:60em;
+		height:40em;
+		margin:auto;
+		display:flex;
+		align-content: center;
+		justify-content: center;
+		margin-bottom:2rem;
+	}
+
+	.main-img::before{
+		content:"";
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,.5);
+		opacity: .5;
+		transform:scale(0);
+		filter:blur(10px);
+		animation: appear 1.5s ease-out forwards;
+	}
+
+	main{
+		background-color:rgba(200,200,200,.8);
+		padding:2rem;
+		border-radius: 5px;
+	}
+
+	.main-img img{
+		max-width:60em;
+		height:40em;
+		position:absolute;
+		align-self: center;
+	}
+	.main-img img,
+	.imgs img{ 
+		display:block;
+		width:100%;
+		padding:0;
+		margin:0;
+		border-radius: 3px;
+	}
+	section.imgs{
+		position:relative;
+		width:70%;
+		margin:0 auto;
+		display:flex;
+		flex:25%;
+		height: auto;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	img.img{
+		display: block;
+		height:auto;
+		width:auto;
+		max-width:15rem;
+		max-height:10em;
+		margin:.5em;
+		box-shadow: 0 0 10px 5px rgba(55,55,55,.4);
+		
+	}
+	.fade-in{
+		opacity:0;
+		animation:fadeIn 1s forwards;
+	}
+	/*fade in animation*/
+	@keyframes fadeIn{
+		to{
+			opacity:1;
+		}
+	}
+	@keyframes appear{
+		to{
+			transform: scale(1.02);
+		};
+	}
+
+	@keyframes welcome{
+		to{
+			transform: scale(1);
+		};
+	}
+	/*welcome animation*/
+		@keyframes close{
+		0%{transform: rotateX(90deg)}
+		100%{transform: rotateX(0deg)}
+	}
+	
+
+</style>
+</head>
+<body class="fade-in">
+	
+	<main class="container">
+
+		<div class="main-img">
+			<img src="imgs/i1.jpg" alt="1" id="current">
+		</div>
+
+
+		<section class="imgs">	
+			<img src="imgs/i1.jpg" alt="1" class="img" />
+			<img src="imgs/i2.jpg" alt="2" class="img" />
+			<img src="imgs/i3.jpg" alt="3" class="img" />
+			<img src="imgs/i4.jpg" alt="4" class="img" />
+			<img src="imgs/i5.jpg" alt="5" class="img" />
+			<img src="imgs/i6.jpg" alt="6" class="img" />
+			<img src="imgs/i7.jpg" alt="7" class="img" />
+			<img src="imgs/i8.jpg" alt="8" class="img" />
+		</section>
+
+	</main>
+	<script type="text/javascript">
+		const [current,imgs] = [document.querySelector('#current'),document.querySelectorAll('.imgs img')];
+		const opacity = 0.4;
+		//imgs.forEach(img => img.addEventListener('click', e=>(current.src = e.target.src)));
+		imgs.forEach(img => img.addEventListener('click', imgClick));
+
+		// click on element take the .src of the clicked eventlistener element and put it where -- current -- id is..
+		function imgClick(e){
+			current.classList.remove('fade-in');
+			imgs.forEach(img => img.style.opacity = 1); //reset back the opacit.y
+			e.target.style.opacity = opacity; // clicked picture becomes 0.4
+			
+			current.src = e.target.src;    //// GETTING SRC ATTRIBUTE AND PUTTING INT HE ONE ON THE BIG IMAGE!!
+
+			//fade-in classfor the selected
+			current.classList.add('fade-in');
+			//a solution to remove the fade in class,so that next time it works again
+			setTimeout(()=> current.classList.remove('fade-in'),500);
+		}
+
+	</script>
+</body>
+</html>
