@@ -3,10 +3,19 @@
 	margin:0;
 	box-sizing:border-box;
 }
+html{
+	max-height:100vh !important;
+	height:100vh !important;
+}
 body{
 	overflow-y:hidden;	
 	overflow-x: scroll;
 	font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+@media (max-width: 1200px){
+	body{
+		overflow:hidden;
+	}
 }
 /*
 
@@ -98,7 +107,7 @@ body{
 
 }
 .part h2{
-	margin-top:25vh;
+	margin-top:18vh;
 	font-family: Bowlby One SC !important;
 	color:rgba(250,250,250,.9);
 	line-height: 1.5;
@@ -118,12 +127,13 @@ body{
 	cursor:pointer;
 }
 .part p{
-	margin-top:5%;
-	padding:3rem 2rem;
+	padding:2rem;
 	font-family: 'Caveat Brush', cursive !important;
-	font-size:1.3rem;
+	font-size:1.5rem;
 	font-weight:600;
-	color:silver;
+	backface-visibility:hidden;
+	mix-blend-mode: difference;
+	color:snow;
 	letter-spacing: .1em;
 	text-shadow:1px 0px 0 #444,
 				0px 1px 0 #333,
@@ -131,7 +141,7 @@ body{
 				1px 2px 0 #111,
 			   -1px -1px 0 #bbb,
 				0 0 3px rgba(0,0,0,.8) ;/*the shadow under all*/
-	opacity: .9;
+	transform:scale(.9);
 	transition:transform 1s ease-out;
 }
 .part{
@@ -139,16 +149,27 @@ body{
 	display:inline-block;
 	align-items: center;
 	width:33.34vw;
-/*	width:50vw; */
 	text-align:center;
 	height:100vh;
 	overflow:hidden;
 	padding:0;
 	margin:0;
 	z-index: 0;
+	backface-visibility: hidden;
 	transition: transform .8s ease-out, opacity linear .5s;
 	opacity:.9;
 }
+@media (max-width: 1350px){
+	.part{
+		width:50vw;
+	}
+}
+@media (max-width: 840px){
+	.part{
+		width:100vw;
+	}
+}
+
 .part *{
 	opacity :1;
 }
@@ -170,7 +191,7 @@ body{
 	transform:scale(1,1);
 }
 .part:hover p{
-	transform:translateY(10%);
+	transform:translateY(10%) scale(1);
 }
 /*
 .part:active{
@@ -187,6 +208,7 @@ body{
 	font-size:1.1rem;
 	letter-spacing: .2em;
 	font-weight: bolder;
+	font-family:'Caveat Brush';
 	color:white;
 	position:absolute;
 	text-align:center;				
@@ -198,15 +220,16 @@ body{
 	margin-top: 1em;
 	border-radius:10px;
 	transform:translateX(-150%);
-	-webkit-transition: all .5s ease-out 2s;
-	transition: all .5s ease-out 2s;
+	text-shadow:: 0 0 2px rgba(0,0,0,.3);
+	-webkit-transition: transform .5s ease-out 1s;
+	transition: transform .5s ease-out 1s;
 }
 .part:hover::before{
-		transform:translateX(-40%);
 -webkit-transform:translateX(-40%);
+		transform:translateX(-40%);
+
 }
 /* same with after*/
-
 
 .part::after{
 	content:'';
@@ -312,17 +335,16 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 
 /*################################################*/
 
-#fixed1{
+.fixed-btn{
 	position:fixed;
-	bottom:5em;
-	left:5em;
+	top:60%;
 	z-index: 2;
 }
+#fixed1{
+	left:2em;
+}
 #fixed2{
-	position:fixed;
-	bottom:5em;
-	right:5em;	
-	z-index: 2;
+	right:2em;	
 }
 
 
@@ -442,6 +464,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	-webkit-animation:animIn 1s ease-in forwards;
 	animation: animIn 1s ease-in forwards;
 }
+
 .overlayPart.show-3D:nth-child(2){
 	background:linear-gradient(to right , #234,#345,#456,#567);
 	-webkit-animation:animIn-r 1s ease forwards;
@@ -452,9 +475,6 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	-webkit-animation:animIn 1s ease-out forwards;
 	animation: animIn 1s ease-out forwards;
 }
-
-
-
 
 .overlayPart:hover{
 	cursor:pointer;
@@ -478,6 +498,16 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	transform: translateX(0%);
 	opacity: .7;
 	transition-delay:.5s;
+}
+
+/*  MEDIA QUERYES  */
+@media (max-width: 1200px){
+	.overlayPart.show-3D:nth-child(1) {
+		display:none;
+	}
+	.overlayPart{
+		width:50%;
+	} 
 }
 /* sub menu */
 

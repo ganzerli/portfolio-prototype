@@ -1,0 +1,75 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	--common-size:51vw;
+	--sliding-begin: calc(782px * 4);
+}
+body{
+	background-color:rgba(253,255,153,1);
+	animation:bgFadeIn 5s forwards;
+}
+.carousel1-container{
+	position:relative;
+	width:200vw;
+	opacity:0;
+	overflow: hidden;
+	padding-top: 3rem;
+	animation: welcome 2s ease-out forwards ;
+}
+
+.carousel-slide{
+	display:inline-flex;
+}
+
+.carousel-slide img{			/*same as carousel1-container*/
+	width:var(--common-size);
+	height:calc(var(--common-size) * 3/4);
+	display:block;
+}
+#wrapper{
+	margin:auto;
+	width:var(--common-size);
+	position: relative;
+	transform:translateX(-200%);
+	animation: middle-run 2s forwards;
+}
+button{
+padding:.3em;
+position:absolute;
+background-color: rgba(200,200,200,.8);
+font-size:40px;
+color:white;
+border:none;
+border-radius: .2em;
+opacity:0;
+top:45%;
+animation:fadeIn 5s forwards 2s;
+}
+
+#prevBtn{
+	left:-5rem;
+}
+#nextBtn{
+	right:-4rem;
+}
+
+@keyframes welcome{
+	0%{}
+	100%{
+		opacity:1;
+		width:50vw;
+	}
+}
+
+@keyframes bgFadeIn{
+	100%{ background-color:rgba(253,255,153, .5); }
+}
+
+@keyframes middle-run{
+	100%{transform: translateX(0);}
+}
+
+@keyframes fadeIn{
+	100%{ opacity:1; }
+}
