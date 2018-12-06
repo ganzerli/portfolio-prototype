@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 	function delayLoadingPage(){
 	setTimeout(()=>{
 		welcomeContainer.style.display='none';
-		welcomeContainer.style.width='';
-		welcomeContainer.style.height='';
+		welcomeContainer.style.width='0';
+		welcomeContainer.style.height='0';
 		welcomeContainer.style.margin='-3000px 0 0 0'
 	},2000);
 
-	type(elements[0],160);
-	type2(elements[1],160);
+	type(elements[0],180);
+	type2(elements[1],180);
 	}
 
 	//giving to delayLoadingPage a sense to be 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 });
 
 
-
+	const mainText ="WELCOME";
 	let counter= 0;
 	let text = "";
 	let counter2= 0;
@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 
 function type(element,timems){
 	if (counter < 1){
-		text = element.innerHTML;
 		element.innerHTML = "";
 	}
-	if(counter < text.length){
-		console.log(counter, element.innerHTML);
-		element.innerHTML+= text.charAt(counter);
+	if(counter < mainText.length){
+		element.innerHTML+= mainText.charAt(counter);
 		counter++;
 		setTimeout(type, timems, element, timems);
 	}else{
@@ -46,12 +44,11 @@ function type(element,timems){
 
 function type2(element,timems){
 	if (counter2 < 1){
-		text2 = element.innerHTML;
 		element.innerHTML = "";
 	}
-	if(counter2 < text2.length){
+	if(counter2 < mainText.length){
 		console.log(counter2, element.innerHTML);
-		element.innerHTML+= text2.charAt(counter2);
+		element.innerHTML+= mainText.charAt(counter2);
 		counter2++;
 		setTimeout(type2, timems, element, timems);
 	}else{
