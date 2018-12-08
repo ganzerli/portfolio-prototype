@@ -138,7 +138,6 @@ body{
 	font-size:1.5rem;
 	font-weight:600;
 	backface-visibility:hidden;
-	mix-blend-mode: difference;
 	color:snow;
 	letter-spacing: .1em;
 	text-shadow:1px 0px 0 #444,
@@ -382,7 +381,13 @@ animation: placingNavigation 1s 2s both;
 }
 /*#####################################		 END		NAVIGATION         END        NAVIGATION 		########################################*/
 .part:nth-child(1) {
-    background-color:rgba(179,227,241, 1);
+     background-image:linear-gradient(
+  						205deg,
+  						rgba(83, 94, 243, 0.9),
+  						rgba(4, 248, 216, 0.8)
+						),
+     				url(./imgs/OUTTHERE.png);
+    background-size: cover;
 } 
 .part:nth-child(2) {
     background-color:rgba(255,99,99, 1);
