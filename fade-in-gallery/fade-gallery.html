@@ -9,16 +9,15 @@
 		padding:0
 		background-color:#333;
 		overflow-x: hidden;
-		perspective: 3000px;
+		perspective: 5000px;
 		opacity: 0;
 		background-color:rgba(40,208,255, 1);
-
 	}
 
 	.container{
-		transform: rotateX(90deg);
+		transform: rotateX(70deg);
 		transform-origin: top;
-		animation:close 2.5s ease-in forwards;
+		animation:close 2s ease-out .1s forwards;
 	}
 	.main-img{
 		position:relative;
@@ -63,14 +62,15 @@
 		border-radius: 3px;
 	}
 	section.imgs{
-		position:relative;
-		width:70%;
-		margin:0 auto;
-		display:flex;
-		flex:25%;
-		height: auto;
-		flex-wrap: wrap;
-		justify-content: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex: 25%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
 	}
 	img.img{
 		display: block;
@@ -80,7 +80,6 @@
 		max-height:10em;
 		margin:.5em;
 		box-shadow: 0 0 10px 5px rgba(55,55,55,.4);
-		
 	}
 	.fade-in{
 		opacity:0;

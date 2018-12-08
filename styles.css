@@ -346,7 +346,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 
 
 
-/*################################################*/
+/*#####################################		 		NAVIGATION  				########################################*/
 
 .fixed-btn{
 	display: inline-block;
@@ -358,19 +358,29 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 
 #fixed1{
 	transform:scale(.7) translateX(-450%);
+	animation: placingNavigation 1s 2s both;
 }
 #fixed2{
 	transform:scale(.7) translateX(300%);
+animation: placingNavigation 1s 2s both;
 }
 @media(max-width:840px){
 	#fixed1{
+		animation: placingNavigation 1s 2s both;
 	transform:scale(.7) translateX(-350%);
 }
 #fixed2{
+	animation: placingNavigation 1s 2s both;
 	transform:scale(.7) translateX(200%);
+	}
 }
+@keyframes placingNavigation{
+0%{transform:translateX(0);
+	opacity:0;}
+50%{opacity:0;}
+100%{opacity: 1}
 }
-
+/*#####################################		 END		NAVIGATION         END        NAVIGATION 		########################################*/
 .part:nth-child(1) {
     background-color:rgba(179,227,241, 1);
 } 
@@ -402,7 +412,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 
 
 
-/*############     menu             #####  menu            menu    ####*/
+/*############     menu             #####  menu         MENU		MENU    ####*/
 
 
 #menu-fixed{
@@ -412,6 +422,15 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	left:50vw;
 	top:6vmin;
 	transform:translateX(-50%);
+	animation: menuAppear 1s 2s both;
+}
+@keyframes menuAppear{
+	0%{opacity: 0
+		
+	}
+	100%{opacity:1;
+		
+	}
 }
 #menu-fixed .line{
 	height:6px;
@@ -424,6 +443,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 	transition:all .4s ease-out;
 	box-shadow: 0 0 2px blue;
 }
+
 #menu-container{
 	position:fixed;
 	display:none;
@@ -461,7 +481,7 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 }
 
 /*##################################################################################################################*/
-/*##################################################################################################################*/
+/*##############################################  M  E  N  U    M  E  N  U  ###########################################*/
 /*##################################################################################################################*/
 /*##################################################################################################################*/
 

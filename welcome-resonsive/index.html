@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .opacity-welcome-media {
+        animation: opacity 1s ease-in forwards 3s;
+      }
+      .container {
+        background: green;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        color: transparent;
+        background: linear-gradient(270deg, #333fe3, #3df507, #e3ff00, #ff0000);
+        background-size: 800% 800%;
+        -webkit-animation: gradient-background 16s ease;
+        -moz-animation: gradient-background 16s ease;
+        animation: gradient-background 16s ease;
+      }
+      .container ul {
+        font-family: "Baloo", cursive;
+        font-weight: 900;
+        list-style: none;
+        font-size: 8vmax;
+        position: absolute;
+      }
+      .container ul li {
+        display: inline-block;
+      }
+      /*every word*/
+      .welcome {
+        left: 6vw;
+        transform: translateX(calc(100vw));
+        animation: wordRight 2s ease-in-out forwards;
+      }
+      .to {
+        top: 25vh;
+        left: 50vw;
+        transform: translateX(calc(-100vw));
+        animation: wordLeft 1.5s ease-in-out forwards 0.6s;
+      }
+      .my {
+        top: 45vh;
+        right: 50vw;
+        transform: translateX(calc(100vw));
+        animation: wordRight 1.2s ease-in-out forwards 0.8s;
+      }
+      .portfolio {
+        top: 65vh;
+        right: 7vw;
+        transform: translateX(calc(-100vw));
+        animation: wordLeft 2s ease-in-out forwards 1s;
+      }
+      /* ANIMATION 4 EVERY LETTER */
+      /*      Welcome     */
+      .welcome li:nth-child(1) {
+        animation: vanish 0.2s ease-out 2.3s forwards;
+      }
+      .welcome li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .welcome li:nth-child(3) {
+        animation: vanish 0.2s ease-out 2.1s forwards;
+      }
+      .welcome li:nth-child(4) {
+        animation: vanish 0.2s ease-out 2.2s forwards;
+      }
+      .welcome li:nth-child(5) {
+        animation: vanish 0.2s ease-out 2.6s forwards;
+      }
+      .welcome li:nth-child(6) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .welcome li:nth-child(7) {
+        animation: vanish 0.2s ease-out 2.2s forwards;
+      }
+
+      /*      To     */
+      .to li:nth-child(1) {
+        animation: vanish 0.2s ease-out 3s forwards;
+      }
+      .to li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.6s forwards;
+      }
+      /*      My     */
+      .my li:nth-child(1) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .my li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.5s forwards;
+      }
+      /*      Portfolio     */
+      .portfolio li:nth-child(1) {
+        animation: vanish 0.2s ease-out 3.5s forwards;
+      }
+      .portfolio li:nth-child(2) {
+        animation: vanish 0.2s ease-out 3.2s forwards;
+      }
+      .portfolio li:nth-child(3) {
+        animation: vanish 0.2s ease-out 3.3s forwards;
+      }
+      .portfolio li:nth-child(4) {
+        animation: vanish 0.2s ease-out 3.7s forwards;
+      }
+      .portfolio li:nth-child(5) {
+        animation: vanish 0.2s ease-out 3.8s forwards;
+      }
+      .portfolio li:nth-child(6) {
+        animation: vanish 0.2s ease-out 3.1s forwards;
+      }
+      .portfolio li:nth-child(7) {
+        animation: vanish 0.2s ease-out 2.9s forwards;
+      }
+      .portfolio li:nth-child(8) {
+        animation: vanish 0.2s ease-out 2.7s forwards;
+      }
+      .portfolio li:nth-child(9) {
+        animation: vanish 0.2s ease-out 3.6s forwards;
+      }
+      /**  WELCOME ANIMATION FOR MEDIA SCREENS */
+      /** WELCOME ANIMATION FOR MEDIA SCREENS */
+
+      @keyframes vanish {
+        100% {
+          transform: scale(5);
+          opacity: 0;
+        }
+      }
+      /*  BACKGROUND AND SINGLE WORDS ANIMATION  */
+      @-webkit-keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes opacity {
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes wordLeft {
+        100% {
+          transform: translateX(0);
+          color: white;
+        }
+      }
+      @keyframes wordRight {
+        100% {
+          transform: translateX(0);
+          color: white;
+        }
+      }
+      /**     END     WELCOME ANIMATION FOR MEDIA SCREENS */
+      /**     END     WELCOME ANIMATION FOR MEDIA SCREENS */
+    </style>
+  </head>
+  <body>
+    <div class="opacity-welcome-media">
+      <div class="container">
+        <ul class="welcome">
+          <li>W</li>
+          <li>E</li>
+          <li>L</li>
+          <li>C</li>
+          <li>O</li>
+          <li>M</li>
+          <li>E</li>
+        </ul>
+        <ul class="to">
+          <li>T</li>
+          <li>O</li>
+        </ul>
+        <ul class="my">
+          <li>M</li>
+          <li>Y</li>
+        </ul>
+        <ul class="portfolio">
+          <li>P</li>
+          <li>O</li>
+          <li>R</li>
+          <li>T</li>
+          <li>F</li>
+          <li>O</li>
+          <li>L</li>
+          <li>I</li>
+          <li>O</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
