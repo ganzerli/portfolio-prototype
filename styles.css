@@ -10,7 +10,8 @@ html{
 
 body{
 	overflow-x:scroll;
-	overflow-y:hidden;	
+	overflow-y:hidden;
+	max-height:100vh !important;	
 	font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 }
 @media (max-width: 1200px){
@@ -20,7 +21,7 @@ body{
 }
 /*
 
-############################################################################################################
+###########################################################################################################
 ###########################################################################################################
 
 */
@@ -35,7 +36,7 @@ body{
 }
 
 .welcome-container{
-	display: none;
+ display: none;
   width:100vw;
   height:100vh;
   overflow:hidden;
@@ -94,10 +95,221 @@ body{
 	animation: goLeft .5s ease-in 1.4s 1 normal forwards running, grayscale .8s ease-in-out 1.3s forwards;
 }
 
-/*
 
-############################################################################################################
-###########################################################################################################
+
+
+/* rules for media screens */
+.opacity-welcome-media{
+	display:none;
+}
+/*  MEDIA FOR SKEW  	WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA */
+		/*  MEDIA FOR SKEW  	WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA*/
+				/*  MEDIA FOR SKEW  	WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA		WELCOME  MEDIA*/
+@media(max-width: 1300px){
+	.skew{
+ 	position:relative;
+	width:0;
+ 	height:0;
+ 	display:none;
+	}
+
+	/*	display none given from js */
+	/*  WHEN MEDIA OTHER WELCOME TEXT  */
+ 	.opacity-welcome-media {
+ 		display:block;
+	    z-index:5;
+	    height:100vh;
+	    overflow: hidden;
+	    animation: animationOpacity 1.5s forwards 3.5s;
+     }
+    @keyframes animationOpacity {
+        100% {
+          height:0px;
+        }
+      }
+
+      .container {
+      	z-index:5;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        position: relative;
+        color:transparent;
+        background: linear-gradient(270deg, #333fe3, #3df507, #e3ff00, #ff0000);
+        background-size: 800% 800%;
+       -webkit-animation: gradient-background 16s ease;
+        -moz-animation: gradient-background 16s ease;
+        animation: gradient-background 16s ease; 
+      }
+
+      .container ul {
+        font-family: "Baloo", cursive;
+        font-weight: 900;
+        list-style: none;
+        font-size: 8vw;
+        position: absolute;
+      }
+      .container ul li {
+        display: inline-block;
+      }
+      /*every word*/
+      .welcome {
+        left: 6vw;
+        transform: translateX(calc(100vw));
+        animation: wordRight 2s ease-in-out forwards;
+      }
+      .to {
+        top: 25vh;
+        left: 50vw;
+        transform: translateX(calc(-100vw));
+        animation: wordLeft 1.5s ease-in-out forwards 0.6s;
+      }
+      .my {
+        top: 45vh;
+        right: 50vw;
+        transform: translateX(calc(100vw));
+        animation: wordRight 1.2s ease-in-out forwards 0.8s;
+      }
+      .portfolio {
+        top: 65vh;
+        right: 7vw;
+        transform: translateX(calc(-100vw));
+        animation: wordLeft 2s ease-in-out forwards 1s;
+      }
+
+    /* ANIMATION 4 EVERY LETTER */
+      /*      Welcome     */
+      .welcome li:nth-child(1) {
+        animation: vanish 0.2s ease-out 2.3s forwards;
+      }
+      .welcome li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .welcome li:nth-child(3) {
+        animation: vanish 0.2s ease-out 2.1s forwards;
+      }
+      .welcome li:nth-child(4) {
+        animation: vanish 0.2s ease-out 2.2s forwards;
+      }
+      .welcome li:nth-child(5) {
+        animation: vanish 0.2s ease-out 2.6s forwards;
+      }
+      .welcome li:nth-child(6) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .welcome li:nth-child(7) {
+        animation: vanish 0.2s ease-out 2.2s forwards;
+      }
+
+      /*      To     */
+      .to li:nth-child(1) {
+        animation: vanish 0.2s ease-out 3s forwards;
+      }
+      .to li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.6s forwards;
+      }
+      /*      My     */
+      .my li:nth-child(1) {
+        animation: vanish 0.2s ease-out 2.8s forwards;
+      }
+      .my li:nth-child(2) {
+        animation: vanish 0.2s ease-out 2.5s forwards;
+      }
+      /*      Portfolio     */
+      .portfolio li:nth-child(1) {
+        animation: vanish 0.2s ease-out 3.5s forwards;
+      }
+      .portfolio li:nth-child(2) {
+        animation: vanish 0.2s ease-out 3.2s forwards;
+      }
+      .portfolio li:nth-child(3) {
+        animation: vanish 0.2s ease-out 3.3s forwards;
+      }
+      .portfolio li:nth-child(4) {
+        animation: vanish 0.2s ease-out 3.7s forwards;
+      }
+      .portfolio li:nth-child(5) {
+        animation: vanish 0.2s ease-out 3.8s forwards;
+      }
+      .portfolio li:nth-child(6) {
+        animation: vanish 0.2s ease-out 3.1s forwards;
+      }
+      .portfolio li:nth-child(7) {
+        animation: vanish 0.2s ease-out 2.9s forwards;
+      }
+      .portfolio li:nth-child(8) {
+        animation: vanish 0.2s ease-out 2.7s forwards;
+      }
+      .portfolio li:nth-child(9) {
+        animation: vanish 0.2s ease-out 3.6s forwards;
+      }
+      	/**  WELCOME ANIMATION FOR MEDIA SCREENS */					/** WELCOME ANIMATION FOR MEDIA SCREENS */
+	@keyframes vanish {
+        100% {
+          transform: scale(5);
+          opacity: 0;
+        }
+      }
+      /*  BACKGROUND AND SINGLE WORDS ANIMATION  */
+      @-webkit-keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+
+        }
+      }
+      @keyframes gradient-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+
+        }
+      }
+
+      @keyframes wordLeft {
+        100% {
+          transform: translateX(0);
+          color: white;
+        }
+      }
+      @keyframes wordRight {
+        100% {
+          transform: translateX(0);
+          color: white;
+        }
+      }
+      /**     END     WELCOME ANIMATION FOR MEDIA SCREENS 			*/
+      /**     END     WELCOME ANIMATION FOR MEDIA SCREENS 			*/
+}
+/*
+#####################################		END WELCOME TEXT 	############################################	END WELCOME ###########################
+################################################################	END WELCOME TEXT 	###########################################
+#####################################		END WELCOME TEXT 	############################################	END WELCOME ###########################
+################################################################	END WELCOME TEXT 	###########################################
+#####################################		END WELCOME TEXT 	############################################	END WELCOME ###########################
+################################################################	END WELCOME TEXT 	###########################################
 
 */
 
@@ -413,8 +625,6 @@ animation: placingNavigation 1s 2s both;
 .part:nth-child(9) {
     background-color:rgba(255,255,255, 1);
 } 
-
-
 
 
 /*############     menu             #####  menu         MENU		MENU    ####*/
