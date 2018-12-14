@@ -21,7 +21,7 @@
 
   <body>
     <!-- WELCOME TEXT FOR MEDIA SCREENS -->
-    <div class="opacity-welcome-media">
+    <div id="welcome1" class="opacity-welcome-media">
       <div class="container">
         <ul class="welcome">
           <li>W</li>
@@ -57,10 +57,21 @@
 
     <!-- FIRST WELCOME OVERLAY -->
 
-    <section class="welcome-container">
+    <section id="welcome2" class="welcome-container">
       <div class="skew left"><h2 class="welcome-text"></h2></div>
       <div class="skew right"><h2 class="welcome-text"></h2></div>
     </section>
+
+    <script type="text/javascript">
+    	if(false){
+    	const w1 = document.getElementById("welcome1");
+    	const w2 = document.getElementById("welcome2");
+    	w1.classList.remove("opacity-welcome-media");
+    	w1.style.display="none";
+    		w2.classList.remove("welcome-container");
+    		w2.style.display="none";
+    	}
+    </script>
 
     <!-- MENU ICON TOP RIGHT -->
 
@@ -187,10 +198,10 @@
             onclick="return false"
             onmousedown="myFunction(this.id)"
             id="redirect-b"
-            >A Reasponsive Webpage</a
+            > Webpage for travelling </a
           >
         </h2>
-        <p>Responsive Colorful webpage on thema Travelling.</p>
+        <p>Responsive webpage on thema Travelling , modern looking and full of colors</p>
       </section>
 
       <section class="part" attribute-in-html="attribute!">

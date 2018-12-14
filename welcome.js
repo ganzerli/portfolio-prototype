@@ -10,14 +10,16 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 		welcomeContainer.style.width='0';
 		welcomeContainer.style.height='0';
 		welcomeContainer.style.margin='-3000px 0 0 0'
-	},2000);
+	},2200);
 
 	type(elements[0],180);
 	type2(elements[1],180);
+		
 	}
-
-	//giving to delayLoadingPage a sense to be 
-	setTimeout(delayLoadingPage,10);
+		if(elements && welcomeContainer){
+			//giving to delayLoadingPage a sense to be 
+			setTimeout(delayLoadingPage,10);
+		}
 
 });
 
