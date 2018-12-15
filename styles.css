@@ -347,7 +347,7 @@ body{
 .part p{
 	padding:0 2rem;
 	font-family: 'Caveat Brush', cursive !important;
-	font-size: 1.7vmax;
+	font-size: 2vmax;
 	font-weight:400;
 	backface-visibility:hidden;
 	color:snow;
@@ -355,7 +355,7 @@ body{
 	text-shadow: 2px 1px 0 #222, 1px 1px 0 #111, 0 0 1px rgba(0,0,0,.8);/*the shadow under all*/
 	transform:scale(.9);
 	transition:transform 1s ease-out;
-	line-height: 1.5;
+	line-height: 1.1;
 	margin-top: 5vh;
 }
 .part{
@@ -388,10 +388,12 @@ body{
 	.part p{
 		font-size: 4vmax;
 		line-height: 1;
+		margin-top: 2vh;
 	}
 	.part h2{
 		font-size: 5vmax;
-		margin-top: 20vh;
+		margin-top: 15vh;
+		padding:1rem ;
 	}
 }
 
@@ -485,9 +487,10 @@ GOT THE PATH OF THE ANCHOR TAG AND GIVEN THE CLASS COVER-SCREEN TO THE PARENT (.
 .cover-screen{
 	pointer-events: none;
 	z-index:4;
-	opacity:1;
 	transform: scale(6,6) !important;
 	pointer-events: none;
+	background-image: none !important;
+	opacity:1 !important;
 } /*          !!!! THE TRANSITION IS GIVEN ALREADYTO .PART         */
 
 .cover-screen h2,
@@ -597,33 +600,55 @@ animation: placingNavigation 1s 2s both;
      background-image:linear-gradient(
   						205deg,
   						rgba(83, 94, 243, 0.9),
-  						rgba(4, 248, 216, 0.8)
+  						rgba(4, 248, 216, 0.9)
 						),
      				url(./imgs/OUTTHERE.png);
     background-size: cover;
 } 
 .part:nth-child(2) {
-    background-color:rgba(255,99,99, 1);
+	background-color:rgb(18, 36, 59);
+	background-image:linear-gradient(
+		205deg,
+		rgba(18, 36, 59,.98),
+		rgba(18, 36, 59,.98)
+	),
+	 url(./imgs/presentation.PNG);
+background-size: cover;
+background-position: top center;
+} 
+.part:nth-child(2)>h2{
+	color:wheat;
 } 
 .part:nth-child(3) {
+	background-color:rgba(255,99,99, 1);
+	background-image:linear-gradient(
+		205deg,
+		rgba(251, 125, 41, 0.9),
+		rgba(255,99,99, 0.9)
+	),
+	 url(./imgs/lodge.PNG);
+	 background-size: cover;
+		background-position: top center;
+	} 
+.part:nth-child(4) {
     background-color:rgba(150,255,161, 1);  
 } 
-.part:nth-child(4) {
+.part:nth-child(5) {
       background-color:rgba(85,85,85, 1);
 } 
-.part:nth-child(5) {
+.part:nth-child(6) {
     background-color:rgba(253,255,153, 1);
 } 
-.part:nth-child(6) {
+.part:nth-child(7) {
     background-color:rgba(40,208,255, 1);
 } 
-.part:nth-child(7) {
+.part:nth-child(8) {
     background-color:rgba(255,237,56, 1);
 } 
-.part:nth-child(8) {
+.part:nth-child(9) {
     background-color:rgba(0,0,0,1);
 } 
-.part:nth-child(9) {
+.part:nth-child(10) {
     background-color:rgba(255,255,255, 1);
 } 
 
