@@ -132,16 +132,18 @@ ul {
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth; }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 50%; } }
+  scroll-behavior: smooth;
+  /* @include responsive(phone) {
+    //width < 600?
+    font-size: 50%;
+  }*/
+  /* @include responsive(tab-portrait) {
+    // < 1200
+    font-size: 50%; //to have 1 rem as 8px , 8/16 = 50%;
+  }*/ }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 50%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -328,7 +330,7 @@ footer p {
     margin: 1rem; }
   .flex-element-3-list li {
     padding: 1rem 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 2; }
     .flex-element-3-list li:last-child {
