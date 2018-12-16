@@ -53,6 +53,6 @@ const animate = (offsets, titles, viewportHeight) => {
     titles[indexToCheck].classList.add("anim-up");
     indexToCheck++;
   } else {
-    console.log(false);
+    false;
   }
 };
